@@ -1,10 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
+import SwiperCore, { } from 'swiper';
 
 import { SliderData } from '../Data/SliderData';
 
 import './swiper-style.css';
+import 'swiper/swiper.scss';
+import 'swiper/swiper-bundle.css';
 
 function SwiperSlider() {
 
@@ -15,11 +17,11 @@ function SwiperSlider() {
 	for (let i = 0; i < 5; i++) {
 		slides.push(
 			<SwiperSlide
+				className='swiper-item'
 				key={`slide-${i}`}
 				tag='li' >
 				<img
 					src={`${SliderData[i].image}`}
-					style={{ listStyle: 'none' }}
 					alt='' width='200' height='150' />
 			</SwiperSlide>
 		);
