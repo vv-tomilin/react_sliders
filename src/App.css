@@ -39,7 +39,8 @@
 
 .slider {
   position: relative;
-  height: 100vh;
+  height: min-content;
+  margin-bottom: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
